@@ -35,8 +35,8 @@ class Linkedin:
         # options.add_argument('user-data-dir=/home/dipes/.config/google-chrome/Profile')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.email = 'mukundkrishnaravi@hotmail.com'
-        self.password = 'klow231991'
+        self.email = 'lol'
+        self.password = 'password'
 
 
 
@@ -266,17 +266,19 @@ class Linkedin:
 
                         # Extract comments
                     comments = []
-                    if len(artpage.find_elements_by_xpath(".//button[@data-control-name='more_comments']")) > 0:
-                        wait = WebDriverWait(driver, 500)
-                        comment_button = wait.until(lambda driver:artpage.find_element_by_xpath(".//button[@data-control-name='more_comments']"))
-                        action_comments = ActionChains(driver)
-                        action_comments.move_to_element(comment_button).click().perform()
-                    time.sleep(2)
-                    comments_divs = artpage.find_elements_by_xpath(".//article")
-                    print(comments_divs)
+
+                    # To be worked in another iteration
+                    # if len(artpage.find_elements_by_xpath(".//button[@data-control-name='more_comments']")) > 0:
+                    #     comment_button = WebDriverWait(driver,10).until(lambda driver:artpage.find_element_by_xpath(".//button[@data-control-name='more_comments']"))
+                    #     action_comments = ActionChains(driver)
+                    #     action_comments.move_to_element(comment_button).click().perform()
+                    # time.sleep(4)
+
+                    # comments_divs = WebDriverWait(driver, 10).until(lambda driver:artpage.find_elements_by_xpath(".//article"))
+                    # print(comments_divs)
                     
-                    for comment in comments_divs:
-                        comments.append(comment.text)
+                    # for comment in comments_divs:
+                    #     comments.append(comment.text)
 
                     article_i['comments'] = comments
                     print(comments)
@@ -350,19 +352,21 @@ class Linkedin:
                     wait = WebDriverWait(driver, 2)
 
                     comments = []
-                    if len(article.find_elements_by_xpath(".//button[@data-control-name='comments_count']")) > 0:
-                        comment_button = wait.until(lambda driver:article.find_element_by_xpath(".//button[@data-control-name='comments_count']"))
-                        action_comments = ActionChains(driver)
-                        action_comments.move_to_element(comment_button).click().perform()
-                        time.sleep(2)
-                        comments_divs = article.find_elements_by_xpath(".//article")
-                        print(comments_divs)
+                    # To be worked in the next iteration
+                    
+                    # if len(article.find_elements_by_xpath(".//button[@data-control-name='comments_count']")) > 0:
+                    #     comment_button = wait.until(lambda driver:article.find_element_by_xpath(".//button[@data-control-name='comments_count']"))
+                    #     action_comments = ActionChains(driver)
+                    #     action_comments.move_to_element(comment_button).click().perform()
+                    #     time.sleep(2)
+                    #     comments_divs = article.find_elements_by_xpath(".//article")
+                    #     print(comments_divs)
                         
-                        for comment in comments_divs:
-                            comments.append(comment.text)
+                    #     for comment in comments_divs:
+                    #         comments.append(comment.text)
 
-                        article_i['comments'] = comments
-                        print(comments)
+                    #     article_i['comments'] = comments
+                    #     print(comments)
 
                     articles_list.append(article_i)
 
@@ -548,7 +552,7 @@ profile_urls = {
 test_urls = list(profile_urls.values())
 test_names =list(profile_urls.keys())
 test_name = test_names[4]
-test_url = test_urls[4]
+test_url = test_urls[12]
 
 linkedin = Linkedin()
 linkedin.login()
@@ -575,15 +579,15 @@ linkedin.gotoProfile(test_url)
     # linkedin.getExperience()
     # linkedin.getSkills()
     # linkedin.getEducation()
-all_cons = linkedin.getConnections()
-connections=list(all_cons.keys())
-Url=list(all_cons.values())
-for i in range(1,len(connections)):
-   connections=Connections[i].split('\n')
-   Name = connections[0]
-   Connection_Type = connections[1]
-   Table2={'Name':test_name,'Connection_Name':Name,'Profile_Link':Url[i],'Connection_Type':Connection_Type}
-   print (Table2)
+all_cons = linkedin.getArticles()
+# connections=list(all_cons.keys())
+# Url=list(all_cons.values())
+# for i in range(1,len(connections)):
+#    connections=Connections[i].split('\n')
+#    Name = connections[0]
+#    Connection_Type = connections[1]
+#    Table2={'Name':test_name,'Connection_Name':Name,'Profile_Link':Url[i],'Connection_Type':Connection_Type}
+#    print (Table2)
     #print (Table2)
     # writeToFile(all_cons)
     # write connections data to file 
