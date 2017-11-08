@@ -35,8 +35,8 @@ class Linkedin:
         # options.add_argument('user-data-dir=/home/dipes/.config/google-chrome/Profile')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.email = ''
-        self.password = ''
+        self.email = 'mukundkrishnaravi@hotmail.com'
+        self.password = 'klow231991'
 
 
 
@@ -546,7 +546,10 @@ profile_urls = {
             }
         # Try it with test_urls
 test_urls = list(profile_urls.values())
+test_names =list(profile_urls.keys())
+test_name = test_names[4]
 test_url = test_urls[4]
+
 linkedin = Linkedin()
 linkedin.login()
 linkedin.gotoProfile(test_url)
@@ -566,14 +569,22 @@ linkedin.gotoProfile(test_url)
         #Followers_Count = overview[1].replace(" followers","")
         #Table1 ={'Name':Name, 'Current Designation':Designation_current,'Followers count':Followers_Count}
         #print (Table1)
-all_connections=linkedin.getArticles()
+    # linkedin.getArticles()
     # linkedin.getSummary()
     # linkedin.getPosts()
     # linkedin.getExperience()
     # linkedin.getSkills()
     # linkedin.getEducation()
-    # all_cons = linkedin.getConnections()
-
+all_cons = linkedin.getConnections()
+connections=list(all_cons.keys())
+Url=list(all_cons.values())
+for i in range(1,len(connections)):
+   connections=Connections[i].split('\n')
+   Name = connections[0]
+   Connection_Type = connections[1]
+   Table2={'Name':test_name,'Connection_Name':Name,'Profile_Link':Url[i],'Connection_Type':Connection_Type}
+   print (Table2)
+    #print (Table2)
     # writeToFile(all_cons)
     # write connections data to file 
 
