@@ -35,8 +35,8 @@ class Linkedin:
         # options.add_argument('user-data-dir=/home/dipes/.config/google-chrome/Profile')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.email = 'lol'
-        self.password = 'password'
+        self.email = ''
+        self.password = ''
 
 
 
@@ -196,7 +196,7 @@ class Linkedin:
                 # Scroll down once to get the articles
                 # Keep it it 5 scrolls for now
                 # self.scrollToN(5)
-                articles = driver.find_elements_by_tag_name('article')[:2]
+                articles = driver.find_elements_by_tag_name('article')
                 print (articles)
 
                 articles_list = []
@@ -288,6 +288,7 @@ class Linkedin:
                     driver.switch_to_window(driver.window_handles[0])
 
                 print(articles_list)
+                return (articles_list)
                 
                     # article_i['title'] = title
                     # article_i['time'] = timestamp
@@ -529,8 +530,8 @@ def writeToFile(objects):
         file.write(json.dumps(objects))
 
 
-#def main():
-profile_urls = {
+def main():
+    profile_urls = {
             'Leza Parker': 'https://www.linkedin.com/in/leza-parker/',
             'Lim Hong Bin': 'https://www.linkedin.com/in/lim-hong-bin-0299542b/',
             'Dean Reinhard': 'https://www.linkedin.com/in/deanreinhard/',
@@ -549,15 +550,14 @@ profile_urls = {
             'Mahima Damani': 'https://www.linkedin.com/in/mahima-damani/',
             }
         # Try it with test_urls
-test_urls = list(profile_urls.values())
-test_names =list(profile_urls.keys())
-test_name = test_names[4]
-test_url = test_urls[12]
-
-linkedin = Linkedin()
-linkedin.login()
-linkedin.gotoProfile(test_url)
-        #overview = linkedin.getOverview()
+        test_urls = list(profile_urls.values())
+        test_names =list(profile_urls.keys())
+        test_name = test_names[2]
+        test_url = test_urls[2]
+        linkedin = Linkedin()
+        linkedin.login()
+        linkedin.gotoProfile(test_url)
+        overview = linkedin.getOverview()
         #Extracting overview details using regex and create a dictionary to push into a pandas dataframe
         #regex = r"\n"
         #matches = re.finditer(regex,overview[0])
@@ -573,30 +573,39 @@ linkedin.gotoProfile(test_url)
         #Followers_Count = overview[1].replace(" followers","")
         #Table1 ={'Name':Name, 'Current Designation':Designation_current,'Followers count':Followers_Count}
         #print (Table1)
-    # linkedin.getArticles()
-    # linkedin.getSummary()
-    # linkedin.getPosts()
-    # linkedin.getExperience()
-    # linkedin.getSkills()
-    # linkedin.getEducation()
-all_cons = linkedin.getArticles()
-# connections=list(all_cons.keys())
-# Url=list(all_cons.values())
-# for i in range(1,len(connections)):
-#    connections=Connections[i].split('\n')
-#    Name = connections[0]
-#    Connection_Type = connections[1]
-#    Table2={'Name':test_name,'Connection_Name':Name,'Profile_Link':Url[i],'Connection_Type':Connection_Type}
-#    print (Table2)
-    #print (Table2)
-    # writeToFile(all_cons)
-    # write connections data to file 
-
-    # linkedin.gotoProfile(test_url)
-    # overview = linkedin.getOverview()
-    # activities = linkedin.getActivities()
-    # summary = linkedin.getSummary()
-    # experiences = linkedin.getExperience()
-    # skills = linkedin.getSkills()
-    # education = linkedin.getEducation()
+        # linkedin.getArticles()
+        # linkedin.getSummary()
+        #Posts=linkedin.getPosts()
+        #for x in range(0,len(Posts)):
+            #if(len(Posts[x])!=3):
+                #del Posts[x]
+        #for i in range(0,len(Posts)):
+            #Table5 = {'Posted by':test_name,'Content': Posts[i]['content'],'Like':Posts[i]['like'],'time':Posts[i]['time']}       
+            #print (Table5)
+        # linkedin.getExperience()
+        # linkedin.getSkills()
+        # linkedin.getEducation()
+        #all_articles = linkedin.getArticles()
+        #for i in range(0,len(all_articles)):
+            #Table3={'Posted by':test_name,'Article title':all_articles[i]['title'],'Article Likes':all_articles[i]['likes'],'Time':all_articles[i]['time'],'Url':all_articles[i]['url'],'Content':all_articles[i]['content']}
+            #print (Table3)
+        #all_cons=linkedin.getConnections()
+        #connections=list(all_cons.keys())
+        #Url=list(all_cons.values())
+        # for i in range(1,len(connections)):
+        #    connections=Connections[i].split('\n')
+        #    Name = connections[0]
+        #    Connection_Type = connections[1]
+        #    Table2={'Name':test_name,'Connection_Name':Name,'Profile_Link':Url[i],'Connection_Type':Connection_Type}
+        #    print (Table2)
+        #print (Table2)
+        # writeToFile(all_cons)
+        # write connections data to file 
+        # linkedin.gotoProfile(test_url)
+        # overview = linkedin.getOverview()
+        # activities = linkedin.getActivities()
+        # summary = linkedin.getSummary()
+        # experiences = linkedin.getExperience()
+        # skills = linkedin.getSkills()
+        # education = linkedin.getEducation()
 
