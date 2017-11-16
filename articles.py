@@ -40,8 +40,8 @@ class Linkedin:
         # options.add_argument('user-data-dir=/home/dipes/.config/google-chrome/Profile')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.email = 'pandey.dipesh50@gmail.com'
-        self.password = 'tatera2013'
+        self.email = ''
+        self.password = ''
 
 
     def login(self):
