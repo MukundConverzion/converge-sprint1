@@ -1,0 +1,69 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActionChains	../Linkedin.py	/^from selenium.webdriver.common.action_chains import ActionChains$/;"	kind:namespace	line:16
+ActionChains	../articles.py	/^from selenium.webdriver.common.action_chains import ActionChains$/;"	kind:namespace	line:15
+BeautifulSoup	../Linkedin.py	/^from bs4 import BeautifulSoup$/;"	kind:namespace	line:6
+By	../Linkedin.py	/^from selenium.webdriver.common.by import By$/;"	kind:namespace	line:14
+By	../articles.py	/^from selenium.webdriver.common.by import By$/;"	kind:namespace	line:13
+DesiredCapabilities	../Linkedin.py	/^from selenium.webdriver.common.desired_capabilities import DesiredCapabilities$/;"	kind:namespace	line:12
+DesiredCapabilities	../articles.py	/^from selenium.webdriver.common.desired_capabilities import DesiredCapabilities$/;"	kind:namespace	line:11
+EC	../Linkedin.py	/^from selenium.webdriver.support import expected_conditions as EC$/;"	kind:namespace	line:17
+EC	../articles.py	/^from selenium.webdriver.support import expected_conditions as EC$/;"	kind:namespace	line:16
+Keys	../Linkedin.py	/^from selenium.webdriver.common.keys import Keys$/;"	kind:namespace	line:13
+Keys	../articles.py	/^from selenium.webdriver.common.keys import Keys$/;"	kind:namespace	line:12
+Linkedin	../Linkedin.py	/^class Linkedin:$/;"	kind:class	line:24
+Linkedin	../articles.py	/^class Linkedin:$/;"	kind:class	line:29
+Linkedin.py	../Linkedin.py	1;"	kind:file	line:1
+Options	../Linkedin.py	/^from selenium.webdriver.chrome.options import Options$/;"	kind:namespace	line:10
+Options	../articles.py	/^from selenium.webdriver.chrome.options import Options$/;"	kind:namespace	line:9
+WebDriverWait	../Linkedin.py	/^from selenium.webdriver.support.ui import WebDriverWait$/;"	kind:namespace	line:11
+WebDriverWait	../articles.py	/^from selenium.webdriver.support.ui import WebDriverWait$/;"	kind:namespace	line:10
+__init__	../Linkedin.py	/^    def __init__(self, ):$/;"	kind:member	line:30
+__init__	../articles.py	/^    def __init__(self, ):$/;"	kind:member	line:35
+article	../articles.py	/^article = Linkedin()$/;"	kind:variable	line:133
+articles.py	../articles.py	1;"	kind:file	line:1
+csv	../Linkedin.py	/^import csv$/;"	kind:namespace	line:4
+csv	../articles.py	/^import csv$/;"	kind:namespace	line:4
+expected_conditions	../Linkedin.py	/^from selenium.webdriver.support import expected_conditions$/;"	kind:namespace	line:15
+expected_conditions	../articles.py	/^from selenium.webdriver.support import expected_conditions$/;"	kind:namespace	line:14
+getActivities	../Linkedin.py	/^    def getActivities(self, url):$/;"	kind:member	line:168
+getArticles	../Linkedin.py	/^    def getArticles(self):$/;"	kind:member	line:183
+getComments	../articles.py	/^    def getComments(self):$/;"	kind:member	line:88
+getConnections	../Linkedin.py	/^    def getConnections(self):$/;"	kind:member	line:76
+getEducation	../Linkedin.py	/^    def getEducation(self):$/;"	kind:member	line:467
+getExperience	../Linkedin.py	/^    def getExperience(self):$/;"	kind:member	line:414
+getOverview	../Linkedin.py	/^    def getOverview(self):$/;"	kind:member	line:148
+getPosts	../Linkedin.py	/^    def getPosts(self):$/;"	kind:member	line:310
+getSkills	../Linkedin.py	/^    def getSkills(self):$/;"	kind:member	line:431
+getSummary	../Linkedin.py	/^    def getSummary(self):$/;"	kind:member	line:387
+gotoProfile	../Linkedin.py	/^    def gotoProfile(self, url):$/;"	kind:member	line:66
+json	../Linkedin.py	/^import json$/;"	kind:namespace	line:5
+json	../articles.py	/^import json$/;"	kind:namespace	line:5
+login	../Linkedin.py	/^    def login(self):$/;"	kind:member	line:43
+login	../articles.py	/^    def login(self):$/;"	kind:member	line:47
+main	../Linkedin.py	/^def main():$/;"	kind:function	line:533
+os	../Linkedin.py	/^import os$/;"	kind:namespace	line:3
+os	../articles.py	/^import os$/;"	kind:namespace	line:3
+quitBrowser	../Linkedin.py	/^    def quitBrowser(self):$/;"	kind:member	line:522
+quitDriver	../articles.py	/^    def quitDriver(self):$/;"	kind:member	line:128
+re	../Linkedin.py	/^import re$/;"	kind:namespace	line:18
+re	../articles.py	/^import re$/;"	kind:namespace	line:17
+requests	../Linkedin.py	/^import requests$/;"	kind:namespace	line:2
+requests	../articles.py	/^import requests$/;"	kind:namespace	line:2
+scrollToBottom	../Linkedin.py	/^    def scrollToBottom(self):$/;"	kind:member	line:501
+scrollToBottom	../articles.py	/^    def scrollToBottom(self):$/;"	kind:member	line:68
+scrollToN	../Linkedin.py	/^    def scrollToN(self, n_scrolls):$/;"	kind:member	line:480
+sys	../Linkedin.py	/^import sys$/;"	kind:namespace	line:20
+sys	../articles.py	/^import sys$/;"	kind:namespace	line:19
+time	../Linkedin.py	/^import time$/;"	kind:namespace	line:1
+time	../articles.py	/^import time$/;"	kind:namespace	line:1
+traceback	../Linkedin.py	/^import traceback$/;"	kind:namespace	line:19
+traceback	../articles.py	/^import traceback$/;"	kind:namespace	line:18
+urls	../articles.py	/^urls = ['https:\/\/www.linkedin.com\/pulse\/rise-india-one-big-stories-asia-next-20-years-piyush-gupta\/',$/;"	kind:variable	line:21
+webdriver	../Linkedin.py	/^from selenium import webdriver$/;"	kind:namespace	line:9
+webdriver	../articles.py	/^from selenium import webdriver$/;"	kind:namespace	line:8
+writeToFile	../Linkedin.py	/^def writeToFile(objects):$/;"	kind:function	line:528
