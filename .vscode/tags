@@ -24,7 +24,7 @@ WebDriverWait	../Linkedin.py	/^from selenium.webdriver.support.ui import WebDriv
 WebDriverWait	../articles.py	/^from selenium.webdriver.support.ui import WebDriverWait$/;"	kind:namespace	line:10
 __init__	../Linkedin.py	/^    def __init__(self, ):$/;"	kind:member	line:30
 __init__	../articles.py	/^    def __init__(self, ):$/;"	kind:member	line:35
-article	../articles.py	/^article = Linkedin()$/;"	kind:variable	line:133
+article	../articles.py	/^article = Linkedin()$/;"	kind:variable	line:139
 articles.py	../articles.py	1;"	kind:file	line:1
 csv	../Linkedin.py	/^import csv$/;"	kind:namespace	line:4
 csv	../articles.py	/^import csv$/;"	kind:namespace	line:4
@@ -49,7 +49,7 @@ main	../Linkedin.py	/^def main():$/;"	kind:function	line:533
 os	../Linkedin.py	/^import os$/;"	kind:namespace	line:3
 os	../articles.py	/^import os$/;"	kind:namespace	line:3
 quitBrowser	../Linkedin.py	/^    def quitBrowser(self):$/;"	kind:member	line:522
-quitDriver	../articles.py	/^    def quitDriver(self):$/;"	kind:member	line:128
+quitDriver	../articles.py	/^    def quitDriver(self):$/;"	kind:member	line:134
 re	../Linkedin.py	/^import re$/;"	kind:namespace	line:18
 re	../articles.py	/^import re$/;"	kind:namespace	line:17
 requests	../Linkedin.py	/^import requests$/;"	kind:namespace	line:2
